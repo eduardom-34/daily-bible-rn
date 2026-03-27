@@ -4,8 +4,9 @@
  */
 
 module.exports = {
+  darkMode: "class",
   content: [
-    "./App.tsx", 
+    "./App.tsx",
     "./components/**/*.{js,jsx,ts,tsx}",
     "./app/**/*.{js,jsx,ts,tsx}",
     "./hooks/**/*.{js,jsx,ts,tsx}",
@@ -16,7 +17,24 @@ module.exports = {
   ],
   presets: [require("nativewind/preset")],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        base: "var(--color-base)",
+        card: "var(--color-card)",
+        header: "var(--color-header)",
+        surface: "var(--color-surface)",
+        "teal-deep": "var(--color-teal-deep)",
+        teal: "var(--color-teal)",
+        "teal-soft": "var(--color-teal-soft)",
+        sage: "var(--color-sage)",
+        gold: "var(--color-gold)",
+        "gold-light": "var(--color-gold-light)",
+        linen: "var(--color-linen)",
+        primary: "var(--color-primary)",
+        secondary: "var(--color-secondary)",
+        border: "var(--color-border)",
+      },
+    },
   },
   plugins: [],
 };

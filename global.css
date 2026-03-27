@@ -3,3 +3,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-base: #F5F0E8;
+    --color-card: #FFFFFF;
+    --color-header: #2D5A5E;
+    --color-surface: #F7F3EE;
+    --color-teal-deep: #2D5A5E;
+    --color-teal: #4A8B8F;
+    --color-teal-soft: #9FD4D8;
+    --color-sage: #7B9E8A;
+    --color-gold: #B8860B;
+    --color-gold-light: #F0E6C8;
+    --color-linen: #C9B99A;
+    --color-primary: #3D3830;
+    --color-secondary: #7A6B55;
+    --color-border: #E0D9CE;
+  }
+
+  .dark {
+    --color-base: #162A2D;
+    --color-card: #2A4E53;
+    --color-header: #162A2D;
+    --color-surface: #1E3A3E;
+    --color-teal-deep: #0F1F21;
+    --color-teal: #6BB8BD;
+    --color-teal-soft: #9FD4D8;
+    --color-sage: #5A8A70;
+    --color-gold: #D4A017;
+    --color-gold-light: #2A4E53;
+    --color-linen: #2A4E53;
+    --color-primary: #E8E4DC;
+    --color-secondary: #9FB8B0;
+    --color-border: #2A4E53;
+  }
+}
