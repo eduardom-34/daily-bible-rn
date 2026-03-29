@@ -10,6 +10,12 @@ import {
   Inter_600SemiBold,
   Inter_700Bold,
 } from "@expo-google-fonts/inter";
+import {
+  Merriweather_300Light,
+  Merriweather_400Regular,
+  Merriweather_700Bold,
+  Merriweather_900Black,
+} from "@expo-google-fonts/merriweather";
 import "../global.css";
 
 SplashScreen.preventAutoHideAsync();
@@ -22,6 +28,10 @@ export default function RootLayout() {
     Inter_500Medium,
     Inter_600SemiBold,
     Inter_700Bold,
+    Merriweather_300Light,
+    Merriweather_400Regular,
+    Merriweather_700Bold,
+    Merriweather_900Black,
   });
 
   useEffect(() => {

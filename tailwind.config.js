@@ -23,6 +23,10 @@ module.exports = {
         "inter-medium": ["Inter_500Medium"],
         "inter-semibold": ["Inter_600SemiBold"],
         "inter-bold": ["Inter_700Bold"],
+        merriweather: ["Merriweather_400Regular"],
+        "merriweather-light": ["Merriweather_300Light"],
+        "merriweather-bold": ["Merriweather_700Bold"],
+        "merriweather-black": ["Merriweather_900Black"],
       },
       colors: {
         base: "var(--color-base)",
