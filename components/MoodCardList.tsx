@@ -21,9 +21,13 @@ export default function MoodCardList({ onSelectMood }: MoodCardListProps) {
     <FlatList
       data={MOODS}
       keyExtractor={(item) => item.id}
-      renderItem={({ item }) => <MoodCard mood={item} onPress={onSelectMood} />}
-      ItemSeparatorComponent={() => <View className="h-3" />}
-      contentContainerClassName="px-5 pb-8"
+      numColumns={2}
+      renderItem={({ item }) => (
+        <View className="flex-1 p-1.5">
+          <MoodCard mood={item} onPress={onSelectMood} />
+        </View>
+      )}
+      contentContainerClassName="pb-8"
       showsVerticalScrollIndicator={false}
     />
   );
