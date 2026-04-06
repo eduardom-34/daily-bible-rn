@@ -4,6 +4,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { Pressable, Text, View } from "react-native";
 import type { MoodOption } from "../../components/MoodCard";
 import MoodCardList from "../../components/MoodCardList";
+import WeekStreak from "../../components/WeekStreak";
 
 export default function VerseScreen() {
   const handleSelectMood = (mood: MoodOption) => {
@@ -15,7 +16,8 @@ export default function VerseScreen() {
       <Text className="text-2xl font-inter-bold text-primary pt-14 pb-4">
         Alivio diario
       </Text>
-      <View className="items-center pb-6 px-5">
+      <WeekStreak />
+      <View className="items-center pb-6 px-5 mt-4">
         <Ionicons name="heart-outline" size={36} color="#4A8B8F" />
         <Text className="text-2xl text-primary font-inter-bold mt-3">
           ¿Cómo está tu corazón hoy?
