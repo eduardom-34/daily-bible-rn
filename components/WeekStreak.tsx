@@ -2,6 +2,7 @@
 
 import { Ionicons } from "@expo/vector-icons";
 import { Text, View } from "react-native";
+import Animated, { BounceIn } from "react-native-reanimated";
 
 const DAYS = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"] as const;
 
@@ -36,7 +37,11 @@ export default function WeekStreak({
         const isFuture = index > today;
 
         return (
-          <View key={index} className="items-center gap-1">
+          <Animated.View
+            key={index}
+            entering={BounceIn.delay(300 + index * 80).duration(500)}
+            className="items-center gap-1"
+          >
             <Text
               className={`text-[10px] font-inter-medium ${
                 isToday
@@ -73,7 +78,7 @@ export default function WeekStreak({
                 </Text>
               )}
             </View>
-          </View>
+          </Animated.View>
         );
       })}
     </View>

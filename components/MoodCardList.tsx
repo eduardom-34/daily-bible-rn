@@ -1,6 +1,7 @@
 /** @format */
 
-import { FlatList, View } from "react-native";
+import { FlatList } from "react-native";
+import Animated, { FadeInUp } from "react-native-reanimated";
 import MoodCard, { type MoodOption } from "./MoodCard";
 
 const MOODS: MoodOption[] = [
@@ -22,10 +23,15 @@ export default function MoodCardList({ onSelectMood }: MoodCardListProps) {
       data={MOODS}
       keyExtractor={(item) => item.id}
       numColumns={2}
-      renderItem={({ item }) => (
-        <View className="flex-1 p-1.5">
+      renderItem={({ item, index }) => (
+        <Animated.View
+          entering={FadeInUp.delay(500 + index * 100)
+            .duration(400)
+            .springify()}
+          className="flex-1 p-1.5"
+        >
           <MoodCard mood={item} onPress={onSelectMood} />
-        </View>
+        </Animated.View>
       )}
       contentContainerClassName="pb-8"
       showsVerticalScrollIndicator={false}
