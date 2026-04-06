@@ -12,7 +12,10 @@ export default function VerseScreen() {
  
   return (
     <View className="flex-1 bg-base px-4">
-      <View className="items-center pt-12 pb-6 px-5">
+      <Text className="text-2xl font-inter-bold text-primary pt-14 pb-4">
+        Alivio diario
+      </Text>
+      <View className="items-center pb-6 px-5">
         <Ionicons name="heart-outline" size={36} color="#4A8B8F" />
         <Text className="text-2xl text-primary font-inter-bold mt-3">
           ¿Cómo está tu corazón hoy?
