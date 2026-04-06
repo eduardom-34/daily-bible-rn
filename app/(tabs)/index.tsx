@@ -9,7 +9,7 @@ export default function VerseScreen() {
   const handleSelectMood = (mood: MoodOption) => {
     console.log("Mood selected:", mood.id);
   };
-
+ 
   return (
     <View className="flex-1 bg-base px-4">
       <View className="items-center pt-12 pb-6 px-5">
